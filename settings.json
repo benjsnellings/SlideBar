@@ -2,30 +2,38 @@
   "plugins": {
     "com.github.slidekb.plugins.Scroller": {
       "processes": [
-        "explorer.exe"
-      ],
-      "hotkeys": [
-        "ctrl alt shift 3"
-      ],
-      "alwaysRun": false
-    },
-    "com.github.slidekb.plugins.Volume": {
-      "processes": [
-        "firefox.exe"
+        "chrome.exe",
+        "firefox.exe",
+        "Discord.exe"
       ],
       "hotkeys": [],
       "alwaysRun": false,
       "sliderList": [
         "",
-        null,
+        "",
         null,
         null
-      ]
+      ],
+      "reversed": false
+    },
+    "com.github.slidekb.plugins.Volume": {
+      "processes": [
+        "not working. do not configure"
+      ],
+      "hotkeys": [],
+      "alwaysRun": false,
+      "sliderList": [
+        "",
+        "",
+        null,
+        null
+      ],
+      "reversed": false
     },
     "com.github.slidekb.plugins.TypeWriter": {
       "processes": [
         "explorer.exe",
-        "notepad.exe"
+        "NOTEPAD.EXE"
       ],
       "hotkeys": [],
       "alwaysRun": false,
@@ -34,7 +42,8 @@
         "l1n1",
         null,
         null
-      ]
+      ],
+      "reversed": false
     },
     "com.github.slidekb.plugins.AltProcess": {
       "processes": [],
@@ -43,11 +52,12 @@
       ],
       "alwaysRun": false,
       "sliderList": [
-        "m1n3",
+        "",
         "",
         null,
         null
-      ]
+      ],
+      "reversed": false
     },
     "com.github.slidekb.plugins.AdobePremiere": {
       "processes": [
@@ -60,7 +70,22 @@
         "",
         null,
         null
-      ]
+      ],
+      "reversed": false
+    },
+    "com.github.slidekb.plugins.JoystickScroller": {
+      "processes": [
+        "experimental.exe"
+      ],
+      "hotkeys": [],
+      "alwaysRun": false,
+      "sliderList": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "reversed": false
     }
   }
 }

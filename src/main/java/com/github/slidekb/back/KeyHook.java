@@ -20,8 +20,12 @@ import java.util.ArrayList;
 
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
+import org.jnativehook.mouse.NativeMouseEvent;
+import org.jnativehook.mouse.NativeMouseInputListener;
+import org.jnativehook.mouse.NativeMouseWheelEvent;
+import org.jnativehook.mouse.NativeMouseWheelListener;
 
-public class KeyHook implements NativeKeyListener {
+public class KeyHook implements NativeKeyListener, NativeMouseWheelListener, NativeMouseInputListener {
 
     /**
      * list of valid hotKeys.
@@ -105,12 +109,12 @@ public class KeyHook implements NativeKeyListener {
         String temp = NativeKeyEvent.getKeyText(e.getKeyCode());
         pressedHotKeys.remove(temp);
         if (pressedHotKeys.size() != 0) {
-            System.out.println(pressedHotKeys.toString());
+//            System.out.println(pressedHotKeys.toString());
         }
 
         pressedAlphaKeys.remove(temp);
         if (pressedAlphaKeys.size() != 0) {
-            System.out.println(pressedAlphaKeys.toString());
+//            System.out.println(pressedAlphaKeys.toString());
         }
     }
 
@@ -128,8 +132,7 @@ public class KeyHook implements NativeKeyListener {
 
     @Override
     public void nativeKeyTyped(NativeKeyEvent e) {
-        System.out.println(NativeKeyEvent.getKeyText(e.getKeyCode()));
-
+//        System.out.println("testing key" + NativeKeyEvent.getKeyText(e.getKeyCode()));
     }
 
     protected static String[] getHotKeys() {
@@ -140,4 +143,39 @@ public class KeyHook implements NativeKeyListener {
         return pressedAlphaKeys.toArray(new String[pressedAlphaKeys.size()]);
     }
 
+	@Override
+	public void nativeMouseClicked(NativeMouseEvent arg0) {
+		
+	}
+
+	@Override
+	public void nativeMousePressed(NativeMouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void nativeMouseReleased(NativeMouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void nativeMouseDragged(NativeMouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void nativeMouseMoved(NativeMouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void nativeMouseWheelMoved(NativeMouseWheelEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+   
 }
